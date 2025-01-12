@@ -583,7 +583,7 @@ button {
 }
 
 .contact_section {
-  background: linear-gradient(323deg, rgba(0, 0, 0, 0) 8.11%, #000 82.58%), url("/img/home/contact.jpg");
+  background: linear-gradient(323deg, rgba(0, 0, 0, 0) 8.11%, #000 82.58%), url("../img/home/contact.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
