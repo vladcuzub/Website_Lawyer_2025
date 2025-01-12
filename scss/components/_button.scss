@@ -1,0 +1,40 @@
+button {
+  background-color: $light-brown;
+  color: $white;
+  font-family: $font-secondary;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  padding: $spacing-300 $spacing-600;
+  border-radius:30px;
+  // border: 1px solid white;
+    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.559);
+  }
+  
+.form_button {
+  width: 100%;
+}
+
+
+// Whats up button
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Distanța de jos */
+    right: 20px; /* Distanța de la dreapta */
+    z-index: 1000; /* Deasupra altor elemente */
+    width: 50px; /* Dimensiunea pictogramei */
+    height: 50px;
+}
+
+.whatsapp-button img {
+    width: 100%; /* Se ajustează la dimensiunea containerului */
+    height: auto;
+    border-radius: 50%; /* Face imaginea rotundă */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.654);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.3); /* Mărește pictograma la hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

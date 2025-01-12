@@ -1,0 +1,43 @@
+// ===========  Cards section ===========
+.card_section{
+  background-color: rgb(255, 255, 255);
+     max-width:1700px ;
+     margin: 4rem auto;
+.container__cards {
+  gap: 1.5rem;
+  // max-width: 90rem;
+  margin: auto;
+
+  .card {
+    padding: 1rem;
+    .header_cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+
+      .card-title {
+        font-family: $font-secondary;
+        color: $secondary-brown;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}}
+
+@media screen and (min-width: $breakpoint-md) {
+  .container__cards {
+ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive column setup */
+    margin-bottom: 4rem;
+
+    .header_cards {
+      img {
+        width: 58px;
+      }
+    }
+  }
+}
+// ===========  Cards section ===========

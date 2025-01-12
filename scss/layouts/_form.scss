@@ -1,0 +1,88 @@
+.contact_section {
+  background: linear-gradient(323deg, rgba(0, 0, 0, 0) 8.11%, #000 82.58%), url('/img/home/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+  padding: 1rem;
+  .logo_contact {
+    @include flex;
+    flex-direction: column;
+    padding-block: $spacing-300;
+  }
+
+  .contact_title {
+    font-weight: $font-weight-bold;
+    margin-block: $spacing-300;
+  }
+
+  .contact_form {
+    background-color: #f0ede283;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-block: $spacing-300;
+
+    .form_group {
+      margin-block: $spacing-300;
+
+      .label-container {
+        margin-block: 0.5rem;
+      }
+      label {
+        font-weight: $font-weight-medium;
+        color: white;
+      }
+      input {
+        width: 100%;
+        padding: $spacing-300;
+        border: none;
+        border-radius: 5px;
+        margin-block: $spacing-300;
+      }
+      textarea {
+        width: 100%;
+        padding: $spacing-300;
+        border: none;
+        border-radius: 5px;
+        margin-block: $spacing-300;
+      }
+
+      display: flex;
+      flex-direction: column;
+      color: black;
+    }
+  }
+}
+
+//Media queries
+@media screen and (min-width: $breakpoint-md) {
+  .contact_section {
+    padding-block: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .contact_header {
+      width: 35rem;
+      text-align: center;
+      .logo_contact{
+        img {
+          width: 45px;
+        }
+      }
+    }
+    .contact_container {
+      width: 40rem;
+      .contact_form {
+        padding: 1rem;
+      }
+      .form_row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,64 @@
+.hero_services {
+  background: linear-gradient(
+      150deg,
+      rgba(0, 0, 0, 0.821) 30%,
+      rgba(74, 58, 39, 0.216) 100%
+    ),
+    url('/img/services/ser.jpg') no-repeat center center;
+  height: 35vw;
+  background-size: cover;
+  background-attachment: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  font-family: $font-secondary;
+  color: rgb(255, 255, 255);
+}
+
+.hero_contain {
+  max-width: 1400px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff54;
+  .service_title {
+    font-weight: $font-weight-bold;
+    font-family: $font-secondary;
+    color: $secondary-brown;
+      padding-block:  1rem;
+  }
+}
+
+
+.plan {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  .header_plan {
+      margin-right: 1rem;
+  }
+  h4 {
+    color: $secondary-brown;
+  }
+  img {
+      max-width: 100px;
+      height: 100px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .service_plan {
+      margin-block: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}

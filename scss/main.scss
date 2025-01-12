@@ -1,0 +1,140 @@
+@import 'abstracts/animation';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/utilities';
+
+@import 'base/resets';
+
+@import 'components/button';
+@import 'components/navbar';
+@import 'components/cards';
+
+@import 'layouts/hero';
+
+@import 'layouts/review';
+@import 'layouts/form';
+@import 'layouts/footer';
+@import 'layouts/_banner';
+
+@import 'pages/home';
+@import 'pages/servicii';
+@import 'abstracts/typography';
+
+.hide {
+  display: none;
+}
+
+//  =========   General Styling  =========   //
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-size: $font-size-medium;
+  background-color: $beige;
+}
+
+// .banner,.review_section, .contact_section{
+//   margin-inline: 2%;
+// }
+
+// ==============   Banner ==============
+
+
+
+
+
+
+// ============= Form Section =============
+// media queries
+// @media screen and (min-width: $breakpoint-xl) {
+//   .wrapper {
+//     display: grid;
+//     grid-template-columns: 2fr 1fr;
+//     padding: 5rem;
+
+//     .section_content {
+//       padding: 2rem 5rem;
+//       .section_title {
+//         font-size: $font-size-xlarge;
+//         margin-bottom: 1rem;
+//       }
+//     }
+//   }
+
+//   .count_section {
+//     max-width: 90rem;
+//     margin-inline: auto;
+//     display: grid;
+//     grid-template-columns: auto auto auto;
+//     gap: 1rem;
+//   }
+
+//   //Cards
+//   .container__cards {
+//     max-width: 90rem;
+//     margin: auto;
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+
+//   //Banner
+//   .banner {
+//     padding: 4rem;
+//     .banner_title {
+//       font-size: $font-size-xxlarge;
+//     }
+//     .banner_text {
+//       font-size: $font-size-large;
+//     }
+//   }
+
+//   //About Section
+//   .about_container {
+//     background-color: $white;
+//     padding: 3.75rem;
+//     flex-direction: row;
+//     .pic_container {
+//       min-width: 25rem;
+//       height: auto;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//     article {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       text-align: center;
+//       padding: 3rem;
+//       line-height: 1.5;
+//     }
+//   }
+// }
+
+
+// POPUP  
+#popup {
+            display: none;
+            position: fixed;
+            width: 150px;
+             top: 100px; /* Pornim din afara ecranului */
+           left: 0; /* Centrare orizontală */
+            background-color: rgba(131, 90, 39, 0.806);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.355);
+            animation: move 5s ease-in-out forwards;
+            font-size: 12px;
+            padding: 8px;
+            border-radius: 0 8px 8px 0;
+             z-index: 345345;
+        }
+
+@keyframes move{
+  0% { left: -150px; } /* Start off-screen */
+    20% { left: 0; } /* Slide into view */
+    80% { left: 0; } /* Stay visible */
+    100% { left: -150px; } /* Slide out */
+}

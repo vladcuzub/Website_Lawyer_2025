@@ -1,0 +1,135 @@
+//Navbar
+.navbar {
+  flex-direction: column;
+  justify-content: space-between;
+
+  .header_logo {
+    display: flex;
+    align-items: center;
+    padding: $spacing-300;
+    z-index: 45345;
+
+    .logo_img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .logo_name {
+      color: $white;
+      font-size: $font-size-small;
+      margin-left: $spacing-200;
+    }
+  }
+
+  .nav_list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-block: $spacing-1000;
+    background: black;
+    transform: translateY(-5%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
+    z-index: -13;
+
+    .nav_item {
+      margin-left: $spacing-200;
+      padding-block: 1rem;
+
+      a {
+        color: $white;
+        font-size: $font-size-small;
+        font-family: $font-secondary;
+      }
+      .active {
+        color: $light-brown;
+      }
+    }
+  }
+
+  .active {
+    top: 0;
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1;
+  }
+
+  //Menu button
+  .menu_button {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+
+    span {
+      width: 30px;
+      height: 2px;
+      background-color: white;
+      display: block;
+      margin: 0.5rem;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    &.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 10px);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -10px);
+    }
+  }
+}
+
+.cta {
+  display: inline-flex;
+  color: $white;
+  font-size: $font-size-small;
+  gap: $spacing-200;
+  display: none;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    .nav_list {
+      position: static;
+      display: flex;
+      justify-content: center;
+      width: auto;
+      padding-block: 0;
+      transform: none;
+      opacity: 1;
+      z-index: 1;
+      background: none;
+
+      .nav_item {
+        margin-left: $spacing-1200;
+        padding-block: 0;
+      }
+    }
+    .cta {
+      display: inline-flex;
+    }
+    .menu_button {
+      display: none;
+    }
+  }
+}

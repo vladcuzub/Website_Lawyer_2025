@@ -1,0 +1,59 @@
+// ==============  REVIEWS SECTION ==============
+.review_section {
+  background-color: $white;
+  padding: 2rem;
+
+  .review_content {
+    max-width: 1200px;
+    margin-top: 4rem;
+  }
+ 
+  .title_section_review {
+    text-align: center;
+  }
+  .review_card {
+    border-radius: 10px;
+    background-color: #f0ede2f9;
+    padding: 1.5rem;
+
+    .header_review {
+      margin-block: 1rem;
+      display: inline-flex;
+
+      .review_img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-block: $spacing-300;
+      }
+      .review_name {
+        margin-left: 1rem;
+        font-weight: $font-weight-bold;
+        color: $secondary-brown;
+        margin-block: $spacing-300;
+      }
+    }
+
+    .date {
+      font-size: $font-size-small;
+      color: $grey;
+    }
+  }
+  .swiper-pagination {
+    margin-block: 1rem;
+    position: relative;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: $secondary-brown !important;
+  width: 25px !important;
+height: 5px !important;
+border-radius: 8px !important;
+}
+
+.checked {
+  color: orange;
+}
+
+// ==============  REVIEWS SECTION ==============

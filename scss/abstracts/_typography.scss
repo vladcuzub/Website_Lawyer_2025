@@ -1,0 +1,27 @@
+h1 {
+  font-size: clamp(2.5rem, 6vw, 3rem); /* Minim 40px, Maxim 48px */
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Minim 32px, Maxim 40px */
+}
+
+h3 {
+  font-size: clamp(1.75rem, 4.5vw, 2.25rem); /* Minim 28px, Maxim 36px */
+}
+
+h4 {
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Minim 24px, Maxim 32px */
+}
+
+h5 {
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem); /* Minim 20px, Maxim 28px */
+}
+
+h6 {
+  font-size: clamp(1rem, 3vw, 1.5rem); /* Minim 16px, Maxim 24px */
+}
+
+p {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem); /* Minim 18px, Maxim 22px */
+}

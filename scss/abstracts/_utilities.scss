@@ -1,0 +1,52 @@
+//Shadow
+.shadow {
+  box-shadow: 0 0 20px 0 rgba(60, 40, 2, 0.515);
+}
+
+//Flow
+.flow {
+  position: relative;
+  top: -2rem;
+}
+
+
+// Image Overlay
+.image_container {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+.overlay_gradient {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 15%, rgba(148, 148, 148, 0) 40%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: white;
+  z-index: 1;
+}
+}
+
+
+
+//Padding
+.padding__block_1200 {
+  padding-block: 2rem; /* Replace with actual spacing value */
+}
+
+.padding__block_600 {
+  padding-block: 1.5rem; /* Replace with actual spacing value */
+}
+
+.padding__inline_400 {
+  padding-inline: 1rem; /* Replace with actual spacing value */
+}
