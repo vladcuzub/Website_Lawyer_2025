@@ -1,8 +1,8 @@
 // ===========  Cards section ===========
 .card_section{
   background-color: rgb(255, 255, 255);
-     max-width:1700px ;
-     margin: 4rem auto;
+  max-width:1700px ;
+  margin: 4rem auto;
 .container__cards {
   gap: 1.5rem;
   // max-width: 90rem;
@@ -16,6 +16,9 @@
       align-items: center;
       flex-direction: column;
       padding: 1rem;
+      img {
+        width: 60px;
+      }
 
       .card-title {
         font-family: $font-secondary;
@@ -30,7 +33,7 @@
   .container__cards {
  
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive column setup */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Responsive column setup */
     margin-bottom: 4rem;
 
     .header_cards {

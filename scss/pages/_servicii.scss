@@ -31,9 +31,7 @@
 .plan {
   background-color: white;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row-reverse;
   padding: 1rem;
   margin: 1rem;
   max-width: 850px;
@@ -42,11 +40,12 @@
     color: $secondary-brown;
   }
   img {
-    max-width: 100px;
-    height: 100px;
+    min-width: 60px;
+    height: 60px;
   }
   .header_plan {
-      margin: 1rem;
+     margin-right: 1rem;
+ 
   }
 }
 
@@ -65,10 +64,10 @@
     gap: 2rem;
 
     .plan {
-      max-width: 670px;
+      max-width: 570px;
       height: auto;
       flex-direction: row;
-      padding: 5%;
+      padding: 1rem;
     }
   }
 }

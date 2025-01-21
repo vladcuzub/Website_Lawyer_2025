@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
       // Effect fade-in  for Title
-      // ScrollReveal().reveal('.hero_title', {
-      //       delay: 500,
-      //       duration: 1000,
-      //       origin: 'bottom', // appears from the bottom
-      //       distance: '50px',
-      //       opacity: 0,
-      //       scale: 0.85,
-      //       reset: true // allow back-scroll animation
-      // });
+      ScrollReveal().reveal('.scroll_500', {
+            delay: 500,
+            duration: 1000,
+            origin: 'bottom', // appears from the bottom
+            distance: '100px',
+            opacity: 0,
+            scale: 0.5,
+            reset: true // allow back-scroll animation
+      });
 
       // Effect  slide-in for text
-      ScrollReveal().reveal('.hero_title', {
-            delay: 200,
+      ScrollReveal().reveal('.scroll_200', {
+            delay: 100,
             duration: 1000,
             origin: 'bottom',
-            distance: '50px',
+            distance: '100px',
             opacity: 0,
-            scale: 0.85,
-            reset: true
+            // scale: 0.8,
+            // reset: true
       });
 
       // Effect slide-up for other elements
-      ScrollReveal().reveal('.hero_other', {
+      ScrollReveal().reveal('.scroll_300', {
             delay: 300,
             duration: 1000,
             origin: 'bottom',
@@ -31,33 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
             reset: true
       });
 
-      // Effect slide-up for other elements
-      // ScrollReveal().reveal('.animated-elements h1, .animated-elements p, .animated-elements img',);
-
-      //       delay: 500,
-      //       duration: 1000,
-      //       origin: 'bottom',
-      //       distance: '15px',
-      //       opacity: 0
-      // });
-
-//  aici trebuie sa lucrez la asta 
+      ScrollReveal().reveal('.scroll_600', {
+            delay: 700,
+            duration: 1000,
+            origin: 'bottom',
+            distance: '30px',
+            opacity: 0,
+            scale: 0.4,
+            reset: true
+      });
 
 
-
-      // Effect zoom-in for picture
-      // ScrollReveal().reveal('.zoom-picture', {
-      //       delay: 200,
-      //       duration: 1000,
-      //       scale: 0.1,
-      //       reset: true,
-      //       beforeReveal: function (el) {
-      //             el.classList.add('zoomed');
-      //       },
-      //       beforeReset: function (el) {
-      //             el.classList.remove('zoomed');
-      //       }
-      // });
 
       //Menu button dropdown
       const menuButton = document.querySelector('.menu_button');
@@ -83,36 +67,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //popup Online User
-      document.addEventListener("DOMContentLoaded", function() {
-            function randomUserCount(min, max) {
-                  return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
+//       document.addEventListener("DOMContentLoaded", function() {
+//             function randomUserCount(min, max) {
+//                   return Math.floor(Math.random() * (max - min + 1)) + min;
+//             }
 
-        function showPopup() {
-            const popup = document.getElementById('popup');
-      const onlineCount = document.getElementById('onlineCount');
+//         function showPopup() {
+//             const popup = document.getElementById('popup');
+//       const onlineCount = document.getElementById('onlineCount');
 
-      if (!popup || !onlineCount) return; // Verificăm dacă elementele există
+//       if (!popup || !onlineCount) return; // Verificăm dacă elementele există
 
-      // Generează un număr fictiv între 10 și 48
-      const userCount = randomUserCount(10, 48);
-      onlineCount.textContent = userCount;
+//       // Generează un număr fictiv între 10 și 48
+//       const userCount = randomUserCount(10, 48);
+//       onlineCount.textContent = userCount;
 
-      // Afișează pop-up-ul
-      popup.style.display = 'block';
+//       // Afișează pop-up-ul
+//       popup.style.display = 'block';
 
-            // Ascunde pop-up-ul după 5 secunde
-            setTimeout(() => {
-            popup.style.display = 'none';
-            }, 5000);
-        }
+//             // Ascunde pop-up-ul după 5 secunde
+//             setTimeout(() => {
+//             popup.style.display = 'none';
+//             }, 5000);
+//         }
 
-      // Afișează pop-up-ul imediat când se încarcă pagina
-      showPopup();
+//       // Afișează pop-up-ul imediat când se încarcă pagina
+//       showPopup();
 
-      // Afișează pop-up-ul la fiecare 5 secunde
-      setInterval(showPopup, 5000);
-    });
+//       // Afișează pop-up-ul la fiecare 5 secunde
+//       setInterval(showPopup, 5000);
+//     });
 
 
 
@@ -146,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         } else {
                               counter.textContent = count + symbol; // Adăugăm simbolurile progresiv
                         }
-                  }, 20); // Viteză animație (20ms)
+                  }, 10); // Viteză animație (20ms)
             });
       }
 

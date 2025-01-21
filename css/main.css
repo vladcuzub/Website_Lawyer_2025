@@ -97,6 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 body {
   line-height: 1.5;
+  letter-spacing: 1.2px;
 }
 
 ol, ul {
@@ -155,8 +156,16 @@ button {
   font-family: "Mulish", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  width: 160px;
+}
+
+.hero_btn:nth-of-type(2) {
+  background-color: transparent;
+  border: 1px solid rgb(148, 117, 79);
 }
 
 .form_button {
@@ -218,6 +227,7 @@ button {
   color: #ffffff;
   font-size: 1rem;
   margin-left: 0.5rem;
+  text-transform: uppercase;
 }
 .navbar .nav_list {
   position: relative;
@@ -244,6 +254,7 @@ button {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Mulish", sans-serif;
+  text-transform: uppercase;
 }
 .navbar .nav_list .nav_item .active {
   color: rgb(148, 117, 79);
@@ -379,6 +390,9 @@ button {
           flex-direction: column;
   padding: 1rem;
 }
+.card_section .container__cards .card .header_cards img {
+  width: 60px;
+}
 .card_section .container__cards .card .header_cards .card-title {
   font-family: "Mulish", sans-serif;
   color: #604b33;
@@ -388,7 +402,7 @@ button {
 @media screen and (min-width: 48rem) {
   .container__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive column setup */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Responsive column setup */
     margin-bottom: 4rem;
   }
   .container__cards .header_cards img {
@@ -398,7 +412,6 @@ button {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,10 +425,21 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
   color: white;
-  padding: 1rem;
+  padding-top: 6rem;
 }
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensures the video covers the entire container */
+  z-index: -1; /* Places the video behind the content */
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -423,10 +447,9 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(150deg, rgb(0, 0, 0) 30%, rgba(74, 58, 39, 0.216) 100%), url("../img/home/mobile_pic.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll;
-  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgb(0, 0, 0)), to(rgba(0, 0, 0, 0.074)));
+  background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.074) 100%); /* Adjust gradient colors and transparency */
+  z-index: 0; /* Sits above the video but below the content */
 }
 
 .header {
@@ -436,15 +459,19 @@ button {
 }
 
 .hero_content {
+  padding: 0.75rem;
   position: relative;
   z-index: 1;
-  max-width: 900px;
+  max-width: 1000px;
 }
 .hero_content .hero_title {
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Mulish", sans-serif;
   color: white;
+}
+.hero_content span {
+  color: rgb(148, 117, 79);
 }
 
 .container {
@@ -466,29 +493,58 @@ button {
           flex-direction: column;
 }
 
-.container_white {
-  background-color: #ffffff;
-}
-
 .section_title {
   font-weight: 700;
   font-family: "Mulish", sans-serif;
   color: #604b33;
 }
 
+.container_white {
+  background-color: white;
+}
+
 .count_section {
-  text-align: center;
-  padding-block: 2rem;
-  margin-block: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-block: 2rem;
 }
 .count_section .count {
-  margin-block: 2.5rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
 }
 .count_section .count .count_title {
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
-  color: #604b33;
-  font-weight: 800;
+  font-weight: 500;
+  width: 120px;
+}
+.count_section .count .count_text {
+  color: #F0EDE2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .count_section {
@@ -502,9 +558,12 @@ button {
 }
 
 @media screen and (min-width: 48rem) {
+  .hero {
+    height: 100vh;
+  }
   .wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 4rem;
   }
@@ -512,14 +571,14 @@ button {
     margin-bottom: 1rem;
   }
   .count_section {
-    max-width: 70.25rem;
-    margin-inline: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem;
+    margin-top: 5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .count_section .count {
-    margin-block: 0;
+    margin-right: 3rem;
   }
   .about_container {
     display: grid;
@@ -541,7 +600,6 @@ button {
 }
 .review_section .review_card {
   border-radius: 10px;
-  background-color: rgba(240, 237, 226, 0.9764705882);
   padding: 1.5rem;
 }
 .review_section .review_card .header_review {
@@ -605,6 +663,9 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-block: 0.75rem;
+}
+.contact_section .logo_contact .logo_name {
+  text-transform: uppercase;
 }
 .contact_section .contact_title {
   font-weight: 700;
@@ -717,6 +778,9 @@ footer .footer_header .header_logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+footer .footer_header .header_logo .logo_name {
+  text-transform: uppercase;
 }
 footer .footer_header .text {
   margin-block: 1rem;
@@ -852,16 +916,9 @@ footer .footer_img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   padding: 1rem;
   margin: 1rem;
   max-width: 850px;
@@ -870,11 +927,11 @@ footer .footer_img {
   color: #604b33;
 }
 .plan img {
-  max-width: 100px;
-  height: 100px;
+  min-width: 60px;
+  height: 60px;
 }
 .plan .header_plan {
-  margin: 1rem;
+  margin-right: 1rem;
 }
 
 @media screen and (min-width: 75rem) {
@@ -890,13 +947,13 @@ footer .footer_img {
     gap: 2rem;
   }
   .service_plan .plan {
-    max-width: 670px;
+    max-width: 570px;
     height: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 5%;
+    padding: 1rem;
   }
 }
 h1 {

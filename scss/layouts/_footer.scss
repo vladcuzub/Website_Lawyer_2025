@@ -23,6 +23,9 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
+      .logo_name {
+        text-transform: uppercase;
+      }
     }
     .text {
       margin-block: 1rem;

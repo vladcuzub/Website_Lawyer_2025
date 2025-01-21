@@ -1,45 +1,53 @@
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
   @include flex;
   flex-direction: column;
-  text-align: center;
   color: white;
-  padding: 1rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(150deg, rgb(0, 0, 0) 30%, rgba(74, 58, 39, 0.216) 100%),
-      url('../img/home/mobile_pic.jpg') no-repeat center center;
-      background-size: cover;
-    background-attachment: scroll;
-    // animation: zoomBackground 2s ease-in-out alternate;
-    z-index: -1;
-  }
+  padding-top: 6rem;
 }
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire container */
+  z-index: -1; /* Places the video behind the content */
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.074) 100%);/* Adjust gradient colors and transparency */
+  z-index: 0; /* Sits above the video but below the content */
+}
+
 .header {
   width: 100%;
   position: absolute;
   z-index: 25;
 }
 
-
 .hero_content {
+  padding: 0.75rem;
   position: relative;
   z-index: 1;
-  max-width: 900px;
+  max-width: 1000px;
+  // text-align: center !important;
 
   .hero_title {
     text-transform: uppercase;
     font-weight: $font-weight-bold;
     font-family: $font-secondary;
     color: white;
+  }
+
+  span {
+    color: $light-brown;
   }
 }
 
@@ -53,48 +61,61 @@
   @include flex;
   flex-direction: column;
 }
-.container_white {
-  background-color: $white;
-}
 .section_title {
   font-weight: $font-weight-bold;
   font-family: $font-secondary;
   color: $secondary-brown;
 }
+.container_white {
+  background-color: white;
+}
 
+// Count Section
 .count_section {
-  text-align: center;
-  padding-block: 2rem;
-  margin-block: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block: 2rem;
 
   .count {
-    margin-block: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
     .count_title {
-        font-size: 3rem;
-      font-family: $font-secondary;
-      color: $secondary-brown;
-      font-weight: $font-weight-extrabold;
+      font-size: 3rem;
+      font-weight: 500;
+      width: 120px;
+    }
+    .count_text {
+      color: $beige;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
   }
 }
 
-
-// Animation Style 
+// Animation Style
 
 .count_section {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .count_section.visible {
-    opacity: 2;
+  opacity: 2;
 }
 
-
 @media screen and (min-width: $breakpoint-md) {
+  .hero {
+    height: 100vh;
+  }
   .wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 4rem;
 
@@ -107,17 +128,12 @@
 
   //Count Section
   .count_section {
-    max-width: 70.25rem;
-    margin-inline: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem;
+    margin-top: 5rem;
+    flex-direction: row;
     .count {
-      // padding: 2rem;
-      margin-block: 0;
+      margin-right: 3rem;
     }
   }
-
   .about_container {
     display: grid;
     grid-template-columns: 1fr 2fr;

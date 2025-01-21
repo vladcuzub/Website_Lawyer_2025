@@ -2,7 +2,7 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 @import 'abstracts/utilities';
-
+@import "animation";
 @import 'base/resets';
 
 @import 'components/button';
@@ -19,6 +19,8 @@
 @import 'pages/home';
 @import 'pages/servicii';
 @import 'abstracts/typography';
+
+
 
 .hide {
   display: none;
