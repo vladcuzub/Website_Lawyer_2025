@@ -1,10 +1,9 @@
 .hero {
   position: relative;
   overflow: hidden;
-  @include flex;
   flex-direction: column;
   color: white;
-  padding-top: 6rem;
+  padding: 6rem 0.75rem;
 }
 .hero-video {
   position: absolute;
@@ -22,7 +21,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.074) 100%);/* Adjust gradient colors and transparency */
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.074) 100%
+  ); /* Adjust gradient colors and transparency */
   z-index: 0; /* Sits above the video but below the content */
 }
 
@@ -33,7 +36,6 @@
 }
 
 .hero_content {
-  padding: 0.75rem;
   position: relative;
   z-index: 1;
   max-width: 1000px;
@@ -45,10 +47,25 @@
     font-family: $font-secondary;
     color: white;
   }
-
-  span {
-    color: $light-brown;
+  .hero_text {
+    color: rgb(155, 155, 155);
   }
+ span {
+ color: $light-brown;
+ }
+  .span_bold {
+     font-style: italic;
+    // font-weight: 400;
+    font-size: 1.35rem;
+     color: rgb(155, 155, 155);
+   
+  }
+}
+
+.buttons_box {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 
 // ==============  Hero Section ==============
@@ -70,30 +87,21 @@
   background-color: white;
 }
 
-// Count Section
+// ==============  Count Section ==============
 .count_section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-block: 2rem;
+  margin-top: 3rem;
 
   .count {
-    padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     .count_title {
-      font-size: 3rem;
-      font-weight: 500;
-      width: 120px;
+      font-weight: 700;
+      width: 100px;
     }
     .count_text {
       color: $beige;
       letter-spacing: 2px;
-      text-transform: uppercase;
     }
   }
 }
@@ -112,6 +120,10 @@
 @media screen and (min-width: $breakpoint-md) {
   .hero {
     height: 100vh;
+    @include flex;
+  }
+  .buttons_box{
+  margin: 0 auto;
   }
   .wrapper {
     display: grid;
@@ -129,9 +141,10 @@
   //Count Section
   .count_section {
     margin-top: 5rem;
+    display: flex;
     flex-direction: row;
     .count {
-      margin-right: 3rem;
+      margin-right: 5rem;
     }
   }
   .about_container {

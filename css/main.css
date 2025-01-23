@@ -48,8 +48,8 @@
   display: block;
 }
 .image_container .overlay_gradient {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, rgb(0, 0, 0)), color-stop(40%, rgba(148, 148, 148, 0)));
-  background: linear-gradient(0deg, rgb(0, 0, 0) 15%, rgba(148, 148, 148, 0) 40%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, rgba(0, 0, 0, 0.389)), color-stop(40%, rgba(148, 148, 148, 0)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.389) 15%, rgba(148, 148, 148, 0) 40%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -160,7 +160,9 @@ button {
   border-radius: 8px;
   letter-spacing: 1.2px;
   cursor: pointer;
-  width: 160px;
+  width: 180px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.298);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.298);
 }
 
 .hero_btn:nth-of-type(2) {
@@ -412,21 +414,12 @@ button {
 .hero {
   position: relative;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
-  padding-top: 6rem;
+  padding: 6rem 0.75rem;
 }
 
 .hero-video {
@@ -459,7 +452,6 @@ button {
 }
 
 .hero_content {
-  padding: 0.75rem;
   position: relative;
   z-index: 1;
   max-width: 1000px;
@@ -470,8 +462,26 @@ button {
   font-family: "Mulish", sans-serif;
   color: white;
 }
+.hero_content .hero_text {
+  color: rgb(155, 155, 155);
+}
 .hero_content span {
   color: rgb(148, 117, 79);
+}
+.hero_content .span_bold {
+  font-style: italic;
+  font-size: 1.35rem;
+  color: rgb(155, 155, 155);
+}
+
+.buttons_box {
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container {
@@ -504,47 +514,24 @@ button {
 }
 
 .count_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-block: 2rem;
+  margin-top: 3rem;
 }
 .count_section .count {
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .count_section .count .count_title {
-  font-size: 3rem;
-  font-weight: 500;
-  width: 120px;
+  font-weight: 700;
+  width: 100px;
 }
 .count_section .count .count_text {
   color: #F0EDE2;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .count_section {
@@ -560,6 +547,18 @@ button {
 @media screen and (min-width: 48rem) {
   .hero {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .buttons_box {
+    margin: 0 auto;
   }
   .wrapper {
     display: grid;
@@ -572,13 +571,16 @@ button {
   }
   .count_section {
     margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
   .count_section .count {
-    margin-right: 3rem;
+    margin-right: 5rem;
   }
   .about_container {
     display: grid;
@@ -591,9 +593,11 @@ button {
   background-color: #ffffff;
   padding: 2rem;
 }
+.review_section h5 {
+  color: rgba(142, 142, 142, 0.511);
+}
 .review_section .review_content {
   max-width: 1200px;
-  margin-top: 4rem;
 }
 .review_section .title_section_review {
   text-align: center;
@@ -601,6 +605,13 @@ button {
 .review_section .review_card {
   border-radius: 10px;
   padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.review_section .review_card .line_quotes {
+  width: 50px;
+  max-height: 250px;
 }
 .review_section .review_card .header_review {
   margin-block: 1rem;
@@ -961,7 +972,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 2.5rem); /* Minim 32px, Maxim 40px */
+  font-size: clamp(2.3rem, 5vw, 2.5rem); /* Minim 32px, Maxim 40px */
 }
 
 h3 {

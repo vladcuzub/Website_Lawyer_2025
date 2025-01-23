@@ -2,19 +2,31 @@
 .review_section {
   background-color: $white;
   padding: 2rem;
+  h5 {
+    color: rgba(142, 142, 142, 0.511);
+  }
 
   .review_content {
     max-width: 1200px;
-    margin-top: 4rem;
+    // margin-top: 4rem;
   }
+  // .review_card::before {
+  //   content: url("../img/home/Linequotes.png");
+  // }
  
   .title_section_review {
     text-align: center;
   }
   .review_card {
     border-radius: 10px;
-    // background-color: #f0ede2f9;
+    // background-color: #f0ede25a;
     padding: 1.5rem;
+    display: flex;
+   
+.line_quotes{
+width: 50px;
+ max-height: 250px;
+}
 
     .header_review {
       margin-block: 1rem;
