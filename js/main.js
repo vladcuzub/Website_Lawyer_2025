@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
       // Effect fade-in  for Title
-      ScrollReveal().reveal('.scroll_500', {
-            delay: 500,
-            duration: 1000,
-            origin: 'bottom', // appears from the bottom
-            distance: '100px',
-            opacity: 0,
-            scale: 0.5,
-            reset: true // allow back-scroll animation
-      });
+ 
 
       // Effect  slide-in for text
       ScrollReveal().reveal('.scroll_200', {
@@ -24,22 +16,39 @@ document.addEventListener('DOMContentLoaded', function () {
       // Effect slide-up for other elements
       ScrollReveal().reveal('.scroll_300', {
             delay: 300,
-            duration: 1000,
+            duration: 1500,
             origin: 'bottom',
-            distance: '50px',
+            distance: '100px',
             opacity: 0,
-            reset: true
+            // reset: true
       });
 
-      ScrollReveal().reveal('.scroll_600', {
-            delay: 700,
-            duration: 1000,
+      ScrollReveal().reveal('.scroll_350', {
+            delay: 500,
+            duration: 2000,
             origin: 'bottom',
-            distance: '30px',
+            distance: '100px',
             opacity: 0,
-            scale: 0.4,
-            reset: true
+            // reset: true
       });
+
+      ScrollReveal().reveal('.scroll_400', {
+            delay: 700,
+            duration: 2000,
+            origin: 'bottom',
+            distance: '100px',
+            opacity: 0,
+            // reset: true
+      });
+      ScrollReveal().reveal('.scroll_500', {
+            delay: 900,
+            duration: 2000,
+            origin: 'bottom',
+            distance: '100px',
+            opacity: 0,
+            // reset: true
+      });
+
 
 
 

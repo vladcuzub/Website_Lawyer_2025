@@ -13,7 +13,7 @@
   // .review_card::before {
   //   content: url("../img/home/Linequotes.png");
   // }
- 
+
   .title_section_review {
     text-align: center;
   }
@@ -22,11 +22,11 @@
     // background-color: #f0ede25a;
     padding: 1.5rem;
     display: flex;
-   
-.line_quotes{
-width: 50px;
- max-height: 250px;
-}
+
+    .line_quotes {
+      width: 50px;
+      max-height: 250px;
+    }
 
     .header_review {
       margin-block: 1rem;
@@ -60,8 +60,8 @@ width: 50px;
 .swiper-pagination-bullet {
   background: $secondary-brown !important;
   width: 25px !important;
-height: 5px !important;
-border-radius: 8px !important;
+  height: 5px !important;
+  border-radius: 8px !important;
 }
 
 .checked {
