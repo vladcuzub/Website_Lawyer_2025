@@ -6,36 +6,15 @@
   background-position: center;
   background-repeat: no-repeat;
   color: $white;
+  padding: 2rem;  
   text-align: center;
-  padding: 2rem;
+
 
   .banner_title {
     font-size: $font-size-large;
     font-weight: $font-weight-bold;
     margin-block: $spacing-300;
   }
-  .banner_text {
-    font-size: $font-size-medium;
-    font-weight: $font-weight-medium;
-  }
 }
+
 // ==============   Banner ==============
-//HOME
-
-//SERVICII
-.banner_servicii{
-  background:black;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-//SERVICII
-@media screen and (min-width: $breakpoint-md){
-  .banner_servicii {
-     display: flex;
-  align-items: center;
-  justify-content: space-around;
-  }
-  
-}

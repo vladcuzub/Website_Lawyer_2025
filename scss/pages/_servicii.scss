@@ -4,9 +4,9 @@
       rgba(0, 0, 0, 0.821) 30%,
       rgba(74, 58, 39, 0.216) 100%
     ),
-    url('../img/services/ser.jpg') no-repeat center center;
+    url('../img/services/ser.jpg') no-repeat center;
   background-size: cover;
-  height: 60vh;
+  height: 50vh;
   display: flex;
 
   .hero_text {
@@ -21,55 +21,70 @@
       font-family: $font-secondary;
       color: rgb(255, 255, 255);
     }
-
     span {
       color: $light-brown;
     }
   }
 }
-
-.plan {
-  background-color: white;
+.section_title {
+  margin-bottom: 2rem;
+  h2 {
+    font-weight: $font-weight-bold;
+    font-family: $font-secondary;
+    color: $secondary-brown;
+  }
+}
+.plan_contain {
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  margin: 1rem;
-  max-width: 850px;
+  background-color: blue;
 
-  h4 {
+}
+.plan {
+  display: flex;
+
+  background-color: white;
+  padding: 4rem;
+  max-width: 850px;
+  margin: 1rem;
+
+  h5 {
     color: $secondary-brown;
   }
   img {
-    min-width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+  
   }
   .header_plan {
-     margin-right: 1rem;
- 
+    margin-right: 1rem;
+    background-color: red;
   }
 }
-
-
 
 @media screen and (min-width: $breakpoint-xl) {
   .hero_services {
-    height: 40vw;
+    height: 70vh;
+  }
+  .hero_contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .service_plan {
-    position: relative;
-    top: -100px;
     max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 
     .plan {
-      max-width: 570px;
+      margin: 0;
+      max-width: 650px;
       height: auto;
       flex-direction: row;
-      padding: 1rem;
     }
   }
 }
-
-

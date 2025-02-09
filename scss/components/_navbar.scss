@@ -1,13 +1,16 @@
 //Navbar
-.navbar {
-  flex-direction: column;
-  justify-content: space-between;
+.header {
+  height: 4rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: black;
 
   .header_logo {
     display: flex;
     align-items: center;
     padding: $spacing-300;
-    z-index: 45345;
 
     .logo_img {
       width: 2.5rem;
@@ -15,50 +18,67 @@
     }
 
     .logo_name {
-      color: $white;
+      color: white;
       font-size: $font-size-small;
       margin-left: $spacing-200;
-       text-transform: uppercase;
+      font-weight: 500;
     }
   }
 
-  .nav_list {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding-block: $spacing-1000;
-    background: black;
-    transform: translateY(-5%);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
-    z-index: -13;
-
+  .cta {
+    gap: $spacing-200;
+    display: none;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    .cta_number {
+      color: $white;
+      font-size: 16px;
+    }
+  }
+  .navbar {
+    .nav_list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.791);
+      width: 100%;
+      // max-height: 0;
+      gap: 2.5rem;
+      padding-block: 0;
+      opacity: 0;
+      overflow: hidden; // Prevent content from overflowing
+      transition: max-height 0.5s linear, opacity 0.5s linear,
+        padding 0.5s linear;
+    }
     .nav_item {
-      margin-left: $spacing-200;
-      padding-block: 1rem;
+      display: flex;
+      justify-content: center;
+      width: 100%;
 
-      a {
+      .nav_link {
         color: $white;
         font-size: $font-size-small;
         font-family: $font-secondary;
-        text-transform: uppercase;
+        display: block;
+        width: max-content;
       }
+
       .active {
         color: $light-brown;
       }
     }
   }
-
-  .active {
-    top: 0;
-    transform: translateY(0);
+  .nav_list.active {
+    // max-height: 400px;
     opacity: 1;
-    z-index: 1;
+    padding-block: 4rem;
+    backdrop-filter: blur(10px);
   }
 
-  //Menu button
+  // Hamburger button
   .menu_button {
     position: absolute;
     top: 0.8rem;
@@ -74,7 +94,7 @@
       height: 2px;
       background-color: white;
       display: block;
-      margin: 0.5rem;
+      margin: 8px;
       transition: transform 0.5s ease, opacity 0.5s ease;
     }
 
@@ -92,46 +112,42 @@
   }
 }
 
-.cta {
-  display: inline-flex;
-  color: $white;
-  font-size: $font-size-small;
-  gap: $spacing-200;
-  display: none;
-  img {
-    width: 20px;
-    height: 20px;
+@media screen and (min-width: $breakpoint-xl) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .cta {
+      display: flex;
+      align-items: center;
+    }
   }
-}
-
-@media screen and (min-width: $breakpoint-md) {
   .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
 
     .nav_list {
-      position: static;
-      display: flex;
-      justify-content: center;
-      width: auto;
-      padding-block: 0;
-      transform: none;
-      opacity: 1;
-      z-index: 1;
-      background: none;
-
+    display: flex !important; // Asigură afișarea pe orizontală
+    flex-direction: row !important;
+    opacity: 1 !important; // Fă vizibile elementele
+    overflow: visible !important; // Elimină restricția de conținut ascuns
+    padding-block: 0 !important; // Elimină padding-ul adăugat pe mobil
+    max-height: unset !important; // Elimină limitarea înălțimii
+  }
       .nav_item {
-        margin-left: $spacing-1200;
-        padding-block: 0;
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        // outline: 1px solid yellow;
+        text-align: center;
+        color: white;
       }
     }
-    .cta {
-      display: inline-flex;
-    }
+
     .menu_button {
       display: none;
     }
   }
-}
+

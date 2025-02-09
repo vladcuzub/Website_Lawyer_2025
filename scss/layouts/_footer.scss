@@ -5,7 +5,8 @@ footer {
   position: relative;
   z-index: 4;
 
-  p,a{
+  p,
+  a {
     font-size: 18px;
     font-family: $font-primary;
     font-weight: 300;
@@ -23,10 +24,8 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      .logo_name {
-        text-transform: uppercase;
-      }
     }
+
     .text {
       margin-block: 1rem;
     }
@@ -60,8 +59,18 @@ footer {
   h6 {
     font-weight: 700;
     font-size: 20px;
+    margin-bottom: 1rem;
   }
-}
+  ul {
+    li {
+        padding-bottom: .5rem;
+        p {
+          line-height: normal;
+        }
+      }
+    }
+  }
+
 
 @media screen and (min-width: $breakpoint-md) {
   section {
@@ -70,7 +79,7 @@ footer {
     justify-content: center;
     padding: 3rem;
 
-    .footer_header{
+    .footer_header {
       min-width: 200px;
       align-content: center;
       margin-right: 5vw;
@@ -78,7 +87,7 @@ footer {
     }
 
     .footer_nav {
-      padding: 0;
+      padding: 1rem;
       width: 840px;
       display: flex;
       justify-content: space-between;
