@@ -50,8 +50,8 @@
       padding-block: 0;
       opacity: 0;
       overflow: hidden; // Prevent content from overflowing
-      transition: max-height 0.5s linear, opacity 0.5s linear,
-        padding 0.5s linear;
+      transition: max-height 0.3s linear, opacity 0.3s linear,
+        padding 0.3s linear;
     }
     .nav_item {
       display: flex;

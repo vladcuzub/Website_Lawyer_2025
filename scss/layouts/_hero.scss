@@ -24,8 +24,8 @@
   height: 100%;
   background: radial-gradient(
     circle,
-    rgba(0, 0, 0, 0.423) 0%,
-    rgb(0, 0, 0) 48%
+     #120f0f9b 10%,
+ #000000ef 60%
   ); /* Adjust gradient colors and transparency */
   z-index: 0; /* Sits above the video but below the content */
   background-size: 150% 150%;
@@ -54,7 +54,7 @@
 
   .hero_title {
     text-align: center;
-    // text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: $font-weight-bold;
     font-family: $font-secondary;
     color: white;
@@ -139,7 +139,6 @@
 
 .about_container {
   padding: 1rem;
-  text-align: center;
 
   .section_title {
     margin-bottom: 0;

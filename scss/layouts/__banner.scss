@@ -1,5 +1,5 @@
 
-//HOME
+//BANNER ------ HOME
 .banner_home {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/home/banner.jpg');
   background-size: cover;
@@ -8,13 +8,24 @@
   color: $white;
   padding: 2rem;  
   text-align: center;
+}
+//BANNER ------ HOME
 
 
-  .banner_title {
-    font-size: $font-size-large;
-    font-weight: $font-weight-bold;
-    margin-block: $spacing-300;
+//BANNER ------ SERVICII
+
+.banner_servicii {
+  background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(6, 4, 1, 0.999)), url('../img/services/servicii_baner.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
+  text-align: center;
+
+  .text {
+    margin-bottom: 1rem;
   }
 }
-
-// ==============   Banner ==============
+//BANNER ------ SERVICII
