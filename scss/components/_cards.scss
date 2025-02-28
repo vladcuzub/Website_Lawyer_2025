@@ -29,6 +29,8 @@
 
 @media screen and (min-width: $breakpoint-md) {
   .container__cards {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Responsive column setup */
     margin-bottom: 4rem;

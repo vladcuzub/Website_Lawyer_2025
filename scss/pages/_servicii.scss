@@ -32,13 +32,17 @@
 }
 
 .services_contain {
-padding: 2rem 1rem;
-background-color: #efefef;
+  padding: 3.5rem 1rem;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .section_title {
   margin-bottom: 1rem;
-      text-align: center;
+  text-align: center;
   h2 {
     font-weight: $font-weight-medium;
     font-family: $font-secondary;
@@ -46,7 +50,7 @@ background-color: #efefef;
   }
   p {
     margin-top: 1rem;
-        font-family: $font-primary;
+    font-family: $font-primary;
     color: black;
     font-weight: 400;
   }
@@ -76,28 +80,94 @@ background-color: #efefef;
     .header_plan {
       margin-top: 1rem;
       .title_plan {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
     }
   }
 }
 
-@media screen and (min-width: $breakpoint-md) {
-  .hero_services {
-    height: 70vh;
+//Domenii Section
+.domenii_section {
+  background-color: #efefef;
+  padding: 2rem 1rem;
+
+  .domenii_header {
+    text-align: center;
+    margin-bottom: 2rem;
+    h2 {
+      font-weight: $font-weight-medium;
+      font-family: $font-secondary;
+      color: $secondary-brown;
+    }
+    p {
+      margin-top: 1rem;
+      font-family: $font-primary;
+      color: black;
+      font-weight: 400;
+    }
   }
-  .services_contain {
+
+  .box {
+    min-width: 300px;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .section_title {
-      padding-top: 3.5rem;
+    background-color: #ffffff;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    height: auto;
+    overflow: hidden;
+    .card-title {
+      font-family: $font-secondary;
+      color: $secondary-brown;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      margin-block: 1rem;
+    }
+    .read_more_btn {
+      background-color: transparent;
+      color: $secondary-brown;
+      font-weight: $font-weight-bold;
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 
+  //expand Box
+  .box.expanded {
+    // max-height: 500px;
+    padding-bottom: 2rem;
+  }
+
+  .hidden_text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  .box.expanded .hidden_text {
+    // display: block;
+    opacity: 1;
+    max-height: 1000px; /* Valoare mare pentru a acoperi orice conținut */
+    opacity: 1;
+    visibility: visible;
+  }
+}
+//Domenii Section
+
+//MEDIA QUERIES
+@media screen and (min-width: $breakpoint-xl) {
+  .hero_services {
+    height: 70vh;
+  }
+  .services_contain {
+    padding-block: 6rem;
+  }
+
   .service_plan {
-    max-width: 1400px;
+    max-width: 1450px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -107,19 +177,40 @@ background-color: #efefef;
       max-width: 650px;
       padding: 2.5rem;
       .plan_contain {
-      flex-direction: row-reverse;
-      align-items: flex-start;
-      text-align: left;
-      .header_plan {
-        margin-top: 0;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        text-align: left;
+        .header_plan {
+          margin-top: 0;
+        }
+        img {
+          width: 85px;
+          height: auto;
+          margin-left: 2rem;
+          filter: opacity(95%);
+        }
       }
-      img {
-        width: 85px;
-        height: auto;
-        margin-left: 2rem;
-        filter: opacity(95%);
+    }
+  }
+
+  .domenii_grid {
+    margin: 0 auto;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    .box {
+      align-items: start;
+      padding: 2rem;
+      .card-title {
+        text-align: left;
       }
-      }
+      .read_more_btn {
+        margin-top: 1rem;
+          padding: 0 !important;
+        }
     }
   }
 }

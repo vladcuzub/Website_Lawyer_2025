@@ -3,16 +3,12 @@
   background-color: $white;
   h5 {
     color: rgba(142, 142, 142, 0.511);
-    margin-bottom: 2rem;
   }
-
   .review {
-    max-width: 1200px;
+    max-width: 1400px;
     position: relative;
+    margin: 0 auto;
   }
-
-  
-
   .title_section_review {
     text-align: center;
 
@@ -23,14 +19,15 @@
     }
   }
   .review_card {
-    border-radius: 10px;
-    // background-color: #f0ede270;
     padding: 1.5rem;
-    display: flex;
+    text-align: center;
 
     .header_review {
       margin-block: 1rem;
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       .review_img {
         width: 5rem;
@@ -39,7 +36,7 @@
         margin-block: $spacing-300;
       }
       .review_name {
-        margin-left: 1rem;
+        // margin-left: 1rem;
         font-weight: $font-weight-bold;
         color: $secondary-brown;
         margin-block: $spacing-300;
@@ -71,7 +68,7 @@
 
 // ==============  REVIEWS SECTION ==============
 
-@media screen and (min-width: $breakpoint-md) {
+@media screen and (min-width: $breakpoint-xl) {
   .overlay_review {
     background: linear-gradient(
       270deg,
@@ -100,5 +97,8 @@
     right: 0;
     z-index: 123;
     pointer-events: none;
+  }
+  .review_card{
+    text-align: left !important;
   }
 }

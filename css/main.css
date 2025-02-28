@@ -95,10 +95,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-body {
-  letter-spacing: 1.2px;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -442,6 +438,8 @@ button {
 
 @media screen and (min-width: 48rem) {
   .container__cards {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Responsive column setup */
     margin-bottom: 4rem;
@@ -626,6 +624,7 @@ button {
 
 .about_container {
   padding: 1rem;
+  text-align: center;
 }
 .about_container .section_title {
   margin-bottom: 0;
@@ -701,11 +700,11 @@ button {
 }
 .review_section h5 {
   color: rgba(142, 142, 142, 0.511);
-  margin-bottom: 2rem;
 }
 .review_section .review {
-  max-width: 1200px;
+  max-width: 1400px;
   position: relative;
+  margin: 0 auto;
 }
 .review_section .title_section_review {
   text-align: center;
@@ -716,17 +715,24 @@ button {
   color: #604b33;
 }
 .review_section .review_card {
-  border-radius: 10px;
   padding: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
 }
 .review_section .review_card .header_review {
   margin-block: 1rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .review_section .review_card .header_review .review_img {
   width: 5rem;
@@ -735,7 +741,6 @@ button {
   margin-block: 0.75rem;
 }
 .review_section .review_card .header_review .review_name {
-  margin-left: 1rem;
   font-weight: 700;
   color: #604b33;
   margin-block: 0.75rem;
@@ -760,7 +765,7 @@ button {
   color: orange;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 75rem) {
   .overlay_review {
     background: -webkit-gradient(linear, right top, left top, color-stop(11%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.75)));
     background: linear-gradient(270deg, rgba(255, 255, 255, 0) 11%, rgba(255, 255, 255, 0.75) 80%);
@@ -782,6 +787,9 @@ button {
     right: 0;
     z-index: 123;
     pointer-events: none;
+  }
+  .review_card {
+    text-align: left !important;
   }
 }
 .contact_section {
@@ -969,7 +977,7 @@ footer .footer_img {
 }
 
 @media screen and (min-width: 48rem) {
-  section {
+  .footer_section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -979,14 +987,14 @@ footer .footer_img {
             justify-content: center;
     padding: 3rem;
   }
-  section .footer_header {
+  .footer_section .footer_header {
     min-width: 200px;
     -ms-flex-line-pack: center;
         align-content: center;
     margin-right: 5vw;
     height: 100px;
   }
-  section .footer_nav {
+  .footer_section .footer_nav {
     padding: 1rem;
     width: 840px;
     display: -webkit-box;
@@ -1060,8 +1068,21 @@ footer .footer_img {
 }
 
 .services_contain {
-  padding: 2rem 1rem;
+  padding: 3.5rem 1rem;
   background-color: #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section_title {
@@ -1117,30 +1138,88 @@ footer .footer_img {
   margin-bottom: 0.5rem;
 }
 
-@media screen and (min-width: 48rem) {
+.domenii_section {
+  background-color: #efefef;
+  padding: 2rem 1rem;
+}
+.domenii_section .domenii_header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.domenii_section .domenii_header h2 {
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+  color: #604b33;
+}
+.domenii_section .domenii_header p {
+  margin-top: 1rem;
+  font-family: "Inter";
+  color: black;
+  font-weight: 400;
+}
+.domenii_section .box {
+  min-width: 300px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  -webkit-transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  height: auto;
+  overflow: hidden;
+}
+.domenii_section .box .card-title {
+  font-family: "Mulish", sans-serif;
+  color: #604b33;
+  font-weight: 700;
+  text-align: center;
+  margin-block: 1rem;
+}
+.domenii_section .box .read_more_btn {
+  background-color: transparent;
+  color: #604b33;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.domenii_section .box.expanded {
+  padding-bottom: 2rem;
+}
+.domenii_section .hidden_text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.domenii_section .box.expanded .hidden_text {
+  opacity: 1;
+  max-height: 1000px; /* Valoare mare pentru a acoperi orice conținut */
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 75rem) {
   .hero_services {
     height: 70vh;
   }
   .services_contain {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .services_contain .section_title {
-    padding-top: 3.5rem;
+    padding-block: 6rem;
   }
   .service_plan {
-    max-width: 1400px;
+    max-width: 1450px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -1170,6 +1249,27 @@ footer .footer_img {
     -webkit-filter: opacity(95%);
             filter: opacity(95%);
   }
+  .domenii_grid {
+    margin: 0 auto;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  .domenii_grid .box {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 2rem;
+  }
+  .domenii_grid .box .card-title {
+    text-align: left;
+  }
+  .domenii_grid .box .read_more_btn {
+    margin-top: 1rem;
+    padding: 0 !important;
+  }
 }
 h1 {
   font-size: clamp(3rem, 6vw, 4.5rem); /* Min 32px, Max 56px */
@@ -1197,7 +1297,7 @@ h6 {
 
 p {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  line-height: 1.75; /* Good readability */
+  line-height: 1.55; /* Good readability */
 }
 
 a {
