@@ -132,7 +132,6 @@ whatsappButton.addEventListener('click', (event) => {
 
 
 // Expand Card
-
 document.addEventListener("DOMContentLoaded", function () {
       let cards = document.querySelectorAll(".box"); // Selectează toate cardurile
 
@@ -152,6 +151,38 @@ document.addEventListener("DOMContentLoaded", function () {
                         hiddenText.style.display = "none"; // Ascunde textul
                         button.textContent = "Citeste mai mult";
                   }
+            });
+      });
+});
+
+// Expand Questions
+document.addEventListener("DOMContentLoaded", function () {
+      let questions = document.querySelectorAll(".question");
+
+      questions.forEach((question) => {
+            question.addEventListener("click", function () {
+                  let answer = this.nextElementSibling;
+                  let arrow = this.querySelector(".arrow");
+
+                  if (answer.classList.contains("show")) {
+                        // Închide secțiunea
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        setTimeout(() => {
+                              answer.style.maxHeight = "0px";
+                              answer.style.opacity = "0";
+                        }, 10);
+                  } else {
+                        // Deschide secțiunea
+                        answer.style.maxHeight = "0px";
+                        answer.style.opacity = "0";
+                        setTimeout(() => {
+                              answer.style.maxHeight = answer.scrollHeight + "px";
+                              answer.style.opacity = "1";
+                        }, 10);
+                  }
+
+                  answer.classList.toggle("show");
+                  arrow.classList.toggle("rotate");
             });
       });
 });

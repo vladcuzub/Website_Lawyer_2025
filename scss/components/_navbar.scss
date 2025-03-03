@@ -45,7 +45,7 @@
       justify-content: center;
       background-color: rgba(0, 0, 0, 0.791);
       width: 100%;
-      // max-height: 0;
+      max-height: 0;
       gap: 2.5rem;
       padding-block: 0;
       opacity: 0;
@@ -72,7 +72,7 @@
     }
   }
   .nav_list.active {
-    // max-height: 400px;
+    max-height: 400px;
     opacity: 1;
     padding-block: 4rem;
     backdrop-filter: blur(10px);

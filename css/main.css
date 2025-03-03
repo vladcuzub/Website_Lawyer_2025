@@ -268,6 +268,7 @@ button {
           justify-content: center;
   background-color: rgba(0, 0, 0, 0.791);
   width: 100%;
+  max-height: 0;
   gap: 2.5rem;
   padding-block: 0;
   opacity: 0;
@@ -297,6 +298,7 @@ button {
   color: #94754f;
 }
 .header .nav_list.active {
+  max-height: 400px;
   opacity: 1;
   padding-block: 4rem;
   -webkit-backdrop-filter: blur(10px);
@@ -1038,6 +1040,68 @@ footer .footer_img {
 }
 .banner_servicii .text {
   margin-bottom: 1rem;
+}
+
+.question_section {
+  background-image: linear-gradient(30deg, #342718 0%, #000000 100%);
+  color: whitesmoke;
+  margin-bottom: 2rem;
+  padding: 3rem 1rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.question_section .section_title h2 {
+  color: white;
+  font-weight: 500;
+}
+.question_section .section_content {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.question_section .question_box {
+  width: 100%;
+  padding-block: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.364);
+}
+.question_section .question_box h5 {
+  font-family: "Mulish", sans-serif;
+  padding-block: 10px;
+}
+.question_section .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+.question_section .question .arrow {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.question_section .answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0; /* Inițial ascuns */
+  -webkit-transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  color: rgba(255, 255, 255, 0.618);
+}
+.question_section .answer.show {
+  max-height: 600px; /* Setează o valoare suficient de mare pentru text */
+  overflow: visible;
+  opacity: 1; /* Devine vizibil treptat */
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); /* Săgeata se rotește când e activă */
 }
 
 .hero_services {

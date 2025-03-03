@@ -1,0 +1,57 @@
+.question_section {
+  // background-color: #000000;
+  background-image: linear-gradient(30deg, #342718 0%, #000000 100%);
+  color: whitesmoke;
+  margin-bottom: 2rem;
+  padding: 3rem 1rem;
+  transform: scale(1);
+
+  .section_title h2 {
+    color: white;
+    font-weight: 500;
+  }
+  .section_content {
+      max-width: 1500px;
+      margin: 0 auto;
+  }
+
+  .question_box {
+    width: 100%;
+    padding-block: 10px;
+    h5 {
+      font-family: $font-secondary;
+       padding-block: 10px;
+    }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.364);
+  }
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin-bottom: 1rem;
+    cursor: pointer;
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0; /* Inițial ascuns */
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out,
+      opacity 0.3s ease-in-out 0.3s;
+      color: rgba(255, 255, 255, 0.618);
+  }
+  .answer.show {
+    max-height: 600px; /* Setează o valoare suficient de mare pentru text */
+    overflow: visible;
+    opacity: 1; /* Devine vizibil treptat */
+  }
+}
+
+
+.rotate {
+  transform: rotate(180deg); /* Săgeata se rotește când e activă */
+}
