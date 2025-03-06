@@ -133,27 +133,24 @@ whatsappButton.addEventListener('click', (event) => {
 
 // Expand Card
 document.addEventListener("DOMContentLoaded", function () {
-      let cards = document.querySelectorAll(".box"); // Selectează toate cardurile
+      let cards = document.querySelectorAll(".box");
 
       cards.forEach(function (card) {
             let button = card.querySelector(".read_more_btn");
             let hiddenText = card.querySelector(".hidden_text");
 
-            if (!button || !hiddenText) return; // Dacă nu există elementele, ieșim
-
             button.addEventListener("click", function () {
                   card.classList.toggle("expanded");
 
                   if (card.classList.contains("expanded")) {
-                        hiddenText.style.display = "block"; // Afișează textul
                         button.textContent = "Citeste mai putin";
                   } else {
-                        hiddenText.style.display = "none"; // Ascunde textul
                         button.textContent = "Citeste mai mult";
                   }
             });
       });
 });
+
 
 // Expand Questions
 document.addEventListener("DOMContentLoaded", function () {

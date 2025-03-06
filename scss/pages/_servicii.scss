@@ -135,25 +135,20 @@
   }
 
   //expand Box
-  .box.expanded {
-    // max-height: 500px;
-    padding-bottom: 2rem;
-  }
+
 
   .hidden_text {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    visibility: hidden;
-    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: max-height 0.5s ease-in-out, opacity 0.2s ease-in-out;
   }
   .box.expanded .hidden_text {
-    // display: block;
-    opacity: 1;
     max-height: 1000px; /* Valoare mare pentru a acoperi orice conținut */
     opacity: 1;
-    visibility: visible;
   }
+
+  
 }
 //Domenii Section
 
