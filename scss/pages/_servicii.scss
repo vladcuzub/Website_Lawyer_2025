@@ -1,29 +1,20 @@
 .hero_services {
-  background: linear-gradient(
-      150deg,
-      rgba(126, 126, 126, 0.17) 10%,
-      rgba(0, 0, 0, 0.984) 90%
-    ),
+  background: linear-gradient(36deg, rgba(255, 255, 255, 0) 5%, rgba(0, 0, 0, 0.808) 45%),
     url('../img/services/ser.jpg') no-repeat center;
   background-size: cover;
-  height: 50vh;
+  height: 55vw;
   display: flex;
 
   .hero_text {
     margin: auto;
     text-align: center;
     color: white;
-    text-transform: uppercase;
-
     .title {
-      text-transform: uppercase;
       font-weight: $font-weight-bold;
       font-family: $font-secondary;
-      color: rgb(255, 255, 255);
     }
-
     p {
-      margin-block: 2rem;
+      margin-block: 1rem;
     }
     span {
       color: $light-brown;
@@ -115,9 +106,10 @@
     justify-content: center;
     flex-direction: column;
     background-color: #ffffff;
-    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out, padding 0.1s ease-in-out;
     height: auto;
     overflow: hidden;
+    margin-bottom: 1rem;
     .card-title {
       font-family: $font-secondary;
       color: $secondary-brown;
@@ -139,13 +131,11 @@
 
   .hidden_text {
     max-height: 0;
-    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.2s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
   }
   .box.expanded .hidden_text {
     max-height: 1000px; /* Valoare mare pentru a acoperi orice conținut */
-    opacity: 1;
   }
 
   
@@ -155,7 +145,8 @@
 //MEDIA QUERIES
 @media screen and (min-width: $breakpoint-xl) {
   .hero_services {
-    height: 70vh;
+    // height: 4vw;
+      height: 29vw;
   }
   .services_contain {
     padding-block: 6rem;

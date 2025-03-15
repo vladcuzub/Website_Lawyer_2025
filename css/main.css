@@ -480,7 +480,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(18, 15, 15, 0.6078431373) 10%, rgba(0, 0, 0, 0.937254902) 60%); /* Adjust gradient colors and transparency */
+  background: radial-gradient(circle, rgba(39, 39, 39, 0.5960784314) 10%, #000000 60%); /* Adjust gradient colors and transparency */
   z-index: 0; /* Sits above the video but below the content */
   background-size: 150% 150%;
   -webkit-animation: gradientMove 4s infinite alternate ease-in-out;
@@ -1104,9 +1104,9 @@ footer .footer_img {
 }
 
 .hero_services {
-  background: linear-gradient(150deg, rgba(126, 126, 126, 0.17) 10%, rgba(0, 0, 0, 0.984) 90%), url("../img/services/ser.jpg") no-repeat center;
+  background: linear-gradient(36deg, rgba(255, 255, 255, 0) 5%, rgba(0, 0, 0, 0.808) 45%), url("../img/services/ser.jpg") no-repeat center;
   background-size: cover;
-  height: 50vh;
+  height: 55vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1115,16 +1115,13 @@ footer .footer_img {
   margin: auto;
   text-align: center;
   color: white;
-  text-transform: uppercase;
 }
 .hero_services .hero_text .title {
-  text-transform: uppercase;
   font-weight: 700;
   font-family: "Mulish", sans-serif;
-  color: rgb(255, 255, 255);
 }
 .hero_services .hero_text p {
-  margin-block: 2rem;
+  margin-block: 1rem;
 }
 .hero_services .hero_text span {
   color: #94754f;
@@ -1237,10 +1234,11 @@ footer .footer_img {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #ffffff;
-  -webkit-transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  -webkit-transition: max-height 0.4s ease-in-out, padding 0.1s ease-in-out;
+  transition: max-height 0.4s ease-in-out, padding 0.1s ease-in-out;
   height: auto;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 .domenii_section .box .card-title {
   font-family: "Mulish", sans-serif;
@@ -1258,19 +1256,17 @@ footer .footer_img {
 }
 .domenii_section .hidden_text {
   max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.5s ease-in-out, opacity 0.2s ease-in-out;
-  transition: max-height 0.5s ease-in-out, opacity 0.2s ease-in-out;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 .domenii_section .box.expanded .hidden_text {
   max-height: 1000px; /* Valoare mare pentru a acoperi orice conținut */
-  opacity: 1;
 }
 
 @media screen and (min-width: 75rem) {
   .hero_services {
-    height: 70vh;
+    height: 29vw;
   }
   .services_contain {
     padding-block: 6rem;
@@ -1326,6 +1322,83 @@ footer .footer_img {
   .domenii_grid .box .read_more_btn {
     margin-top: 1rem;
     padding: 0 !important;
+  }
+}
+.h_about {
+  background: linear-gradient(36deg, rgba(255, 255, 255, 0) 5%, rgba(0, 0, 0, 0.9) 45%), url("../img/desk_1.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 55vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero_text {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.hero_text .title {
+  font-weight: 700;
+  font-family: "Mulish", sans-serif;
+}
+.hero_text p {
+  margin-block: 1rem;
+}
+.hero_text span {
+  color: #94754f;
+}
+
+.about {
+  height: 100vh;
+}
+.about h2 {
+  font-size: 2.5rem;
+  font-family: "Mulish", sans-serif;
+  color: #604b33;
+  margin-block: 1rem;
+}
+.about p {
+  font-size: 1.125rem;
+  font-family: "Inter";
+  color: #000000;
+  font-weight: 400;
+}
+.about article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding-inline: 1rem;
+  line-height: 1.5;
+}
+.about article .about_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-block: 1rem;
+}
+.about article .about_text {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-block: 1rem;
+}
+
+@media screen and (min-width: 75rem) {
+  .h_about {
+    height: 29vw;
   }
 }
 h1 {
