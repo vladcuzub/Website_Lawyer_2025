@@ -184,3 +184,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 });
 
+// Parallax efect for mobile
+
+
+const parallaxBg = document.querySelector('.parallax-bg');
+
+window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      parallaxBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+      // Ajustează viteza efectului modificând 0.5
+});

@@ -592,7 +592,7 @@ button {
 }
 
 .container {
-  width: min(81.25rem, 100% - 2rem);
+  width: min(85.25rem, 100% - 2rem);
   margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -794,10 +794,8 @@ button {
   }
 }
 .contact_section {
-  background: linear-gradient(323deg, rgba(0, 0, 0, 0) 8.11%, #000 82.58%), url("../img/home/contact.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(323deg, rgba(0, 0, 0, 0) 8.11%, #000 82.58%), url("../img/home/contact.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   color: #ffffff;
   padding: 1rem;
 }
@@ -1007,19 +1005,40 @@ footer .footer_img {
   }
 }
 .banner_home {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/home/banner.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/home/banner.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home/banner.jpg") center/cover no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  color: white;
   padding: 2rem;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Permite centrul conținutului */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Mai mare decât ecranul pentru a crea efectul de mișcare */
+  background: inherit; /* Folosește același background */
+  will-change: transform; /* Optimizare pentru performanță */
+  z-index: -1; /* Plasează fundalul în spate */
 }
 
 .banner_servicii {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.281)), to(rgba(6, 4, 1, 0.999))), url("../img/services/servicii_baner.jpg") center/cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(6, 4, 1, 0.999)), url("../img/services/servicii_baner.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1036,9 +1055,6 @@ footer .footer_img {
           flex-direction: column;
   padding: 3rem;
   text-align: center;
-}
-.banner_servicii .text {
-  margin-bottom: 1rem;
 }
 
 .question_section {
@@ -1356,49 +1372,83 @@ footer .footer_img {
 }
 
 .about {
-  height: 100vh;
-}
-.about h2 {
-  font-size: 2.5rem;
-  font-family: "Mulish", sans-serif;
-  color: #604b33;
-  margin-block: 1rem;
-}
-.about p {
-  font-size: 1.125rem;
-  font-family: "Inter";
-  color: #000000;
-  font-weight: 400;
-}
-.about article {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-inline: 1rem;
+}
+.about h2 {
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+  color: #604b33;
+}
+.about .about_article {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  padding-inline: 1rem;
-  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.about article .about_title {
-  font-size: 1.5rem;
+.about .about_article .about_text {
+  margin-bottom: 1rem;
+}
+.about .about_article .about_text .about_title {
   font-weight: 700;
-  margin-block: 1rem;
+  font-family: "Mulish", sans-serif;
+  color: #94754f;
+  max-width: 650px;
 }
-.about article .about_text {
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-block: 1rem;
+.about .about_article .about_images {
+  max-width: 520px;
 }
 
 @media screen and (min-width: 75rem) {
   .h_about {
     height: 29vw;
+  }
+  .about_article {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about_article .about_images {
+    margin-left: 2rem;
+    width: 100%;
+  }
+  .about_article .about_images img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 h1 {
