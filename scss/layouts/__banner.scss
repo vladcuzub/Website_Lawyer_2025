@@ -4,7 +4,6 @@
     url('../img/home/banner.jpg') center/cover no-repeat;
  
   position: relative;
-  background-attachment: fixed;
   color: white;
   padding: 2rem;
   text-align: center;
@@ -30,7 +29,6 @@
 .banner_servicii {
   background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(6, 4, 1, 0.999)),
     url('../img/services/servicii_baner.jpg') center/cover no-repeat;
-  background-attachment: fixed;
   color: white;
   display: flex;
   align-items: center;

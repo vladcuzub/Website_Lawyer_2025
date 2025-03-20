@@ -1008,7 +1008,6 @@ footer .footer_img {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/home/banner.jpg") center/cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home/banner.jpg") center/cover no-repeat;
   position: relative;
-  background-attachment: fixed;
   color: white;
   padding: 2rem;
   text-align: center;
@@ -1038,7 +1037,6 @@ footer .footer_img {
 .banner_servicii {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.281)), to(rgba(6, 4, 1, 0.999))), url("../img/services/servicii_baner.jpg") center/cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(6, 4, 1, 0.999)), url("../img/services/servicii_baner.jpg") center/cover no-repeat;
-  background-attachment: fixed;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
