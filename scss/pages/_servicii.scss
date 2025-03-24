@@ -52,6 +52,7 @@
   max-width: 850px;
   margin-bottom: 2rem;
   padding: 2rem 1rem;
+     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.087);
 
   h5 {
     color: $secondary-brown;
@@ -110,6 +111,7 @@
     height: auto;
     overflow: hidden;
     margin-bottom: 1rem;
+       box-shadow: 0 15px 15px rgba(0, 0, 0, 0.087);
     .card-title {
       font-family: $font-secondary;
       color: $secondary-brown;

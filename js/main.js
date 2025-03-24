@@ -184,13 +184,37 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 });
 
-// Parallax efect for mobile
 
 
-const parallaxBg = document.querySelector('.parallax-bg');
+// Progress Bar
+document.addEventListener('DOMContentLoaded', function () {
+      // Inițial setează width la 0
+      document.querySelectorAll('.progress-fill').forEach(function (bar) {
+            bar.dataset.finalWidth = bar.style.width;
+            bar.style.width = '0';
+      });
 
-window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
-      parallaxBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-      // Ajustează viteza efectului modificând 0.5
+      // Funcție pentru a verifica dacă un element este în viewport
+      function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+      }
+
+      // Funcție pentru a anima barele când sunt vizibile
+      function animateBars() {
+            document.querySelectorAll('.progress-fill').forEach(function (bar) {
+                  if (isInViewport(bar) && bar.style.width !== bar.dataset.finalWidth) {
+                        bar.style.width = bar.dataset.finalWidth;
+                  }
+            });
+      }
+
+      // Verifică la încărcare și la scroll
+      animateBars();
+      window.addEventListener('scroll', animateBars);
 });
