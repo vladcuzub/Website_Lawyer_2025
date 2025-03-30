@@ -656,45 +656,120 @@ button {
 }
 
 .example_section {
-  padding: 1rem;
+  padding: 3rem 1.5rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.example_header {
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .example_title {
-  font-weight: 600;
-  margin-bottom: 2rem;
-  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
   color: #604b33;
   font-family: "Mulish", sans-serif;
-  padding-top: 50px;
+  position: relative;
+  display: inline-block;
+}
+.example_title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: #604b33;
+  border-radius: 2px;
 }
 
-.example_content {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.26);
-}
-.example_content .example_text {
-  margin-block: 1rem;
+.subtitle {
   color: rgba(98, 98, 98, 0.853);
-}
-.example_content img {
-  border-radius: 5px;
-  min-height: 300px;
-}
-.example_content .text_bold {
-  font-weight: 600;
-  margin: 2rem 0 1rem 0;
-}
-.example_content span {
-  font-weight: 600;
-  color: black;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.section_title {
+.example_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.exemple_card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  background-color: #fff;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.exemple_card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.exemple_card:hover .exemple_img img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.exemple_card .exemple_img {
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  height: 180px;
+}
+.exemple_card .exemple_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.exemple_card .card_title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #604b33;
+  position: relative;
+  padding-bottom: 10px;
+}
+.exemple_card .card_title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #604b33;
+}
+.exemple_card .example_text {
+  color: rgba(98, 98, 98, 0.853);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.exemple_card .example_text p {
+  margin-bottom: 0.75rem;
+}
+.exemple_card .example_text p:last-child {
   margin-bottom: 0;
 }
-
-.section_text span {
+.exemple_card .example_text strong {
   font-weight: 700;
+  color: #333;
 }
 
 @media screen and (min-width: 75rem) {
@@ -759,17 +834,22 @@ button {
   }
   .example_container {
     background-color: white;
+    margin: 0 auto;
+    max-width: 1400px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 1rem;
+  }
+  .example_container .exemple_img {
+    width: 100%;
+    height: 220px;
   }
 }
 .review_section {
   background-color: #ffffff;
 }
-.review_section h5 {
-  color: rgba(142, 142, 142, 0.511);
+.review_section p {
+  color: rgb(142, 142, 142);
 }
 .review_section .review {
   max-width: 1400px;
@@ -891,9 +971,9 @@ button {
   margin-block: 0.75rem;
 }
 .contact_section .contact_form {
-  background-color: rgba(240, 237, 226, 0.1254901961);
+  background-color: #f0ede2;
   padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin-block: 0.75rem;
@@ -914,7 +994,7 @@ button {
 }
 .contact_section .contact_form .form_group label {
   font-weight: 600;
-  color: white;
+  color: black;
 }
 .contact_section .contact_form .form_group input {
   width: 100%;
@@ -929,6 +1009,9 @@ button {
   border: none;
   border-radius: 5px;
   margin-block: 0.75rem;
+}
+.contact_section .contact_form .form_button {
+  background-color: #604b33;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1242,7 +1325,7 @@ footer .footer_img {
 .section_title p {
   margin-top: 1rem;
   font-family: "Inter";
-  color: black;
+  color: rgba(98, 98, 98, 0.853);
   font-weight: 400;
 }
 
@@ -1301,7 +1384,7 @@ footer .footer_img {
 .domenii_section .domenii_header p {
   margin-top: 1rem;
   font-family: "Inter";
-  color: black;
+  color: rgba(98, 98, 98, 0.853);
   font-weight: 400;
 }
 .domenii_section .box {
