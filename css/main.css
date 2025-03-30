@@ -655,6 +655,48 @@ button {
   max-height: 400px;
 }
 
+.example_section {
+  padding: 1rem;
+}
+
+.example_title {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #604b33;
+  font-family: "Mulish", sans-serif;
+  padding-top: 50px;
+}
+
+.example_content {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.example_content .example_text {
+  margin-block: 1rem;
+  color: rgba(98, 98, 98, 0.853);
+}
+.example_content img {
+  border-radius: 5px;
+  min-height: 300px;
+}
+.example_content .text_bold {
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+.example_content span {
+  font-weight: 600;
+  color: black;
+}
+
+.section_title {
+  margin-bottom: 0;
+}
+
+.section_text span {
+  font-weight: 700;
+}
+
 @media screen and (min-width: 75rem) {
   .hero {
     height: 100vh;
@@ -714,6 +756,13 @@ button {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 6rem;
+  }
+  .example_container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
   }
 }
 .review_section {

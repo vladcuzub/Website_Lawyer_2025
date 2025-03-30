@@ -4,9 +4,7 @@
   color: white;
   padding: 5rem 0.75rem;
   display: flex;
-      box-shadow:1px 12px 17px -2px rgba(0,0,0,0.74);
-
-
+  box-shadow: 1px 12px 17px -2px rgba(0, 0, 0, 0.74);
 }
 
 .hero-video {
@@ -17,7 +15,6 @@
   height: 100%;
   object-fit: cover; /* Ensures the video covers the entire container */
   z-index: -1; /* Places the video behind the content */
- 
 }
 .hero::before {
   content: '';
@@ -177,6 +174,52 @@
   }
 }
 
+// ============== Exemple ==============
+.example_section {
+    padding: 1rem;
+  }
+  .example_title {
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: $secondary-brown;
+      font-family: $font-secondary;
+      padding-top: 50px;
+  }
+
+
+
+
+  .example_content {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    .example_text {
+      margin-block: 1rem;
+      color: rgba(98, 98, 98, 0.853);
+    }
+    img {
+      border-radius: 5px;
+      min-height: 300px;
+    }
+    .text_bold {
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+    }
+    span {
+      font-weight: 600;
+      color: black;
+    }
+  }
+  .section_title {
+    margin-bottom: 0;
+  }
+  .section_text {
+    span {
+      font-weight: 700;
+    }
+  }
+
+
 @media screen and (min-width: $breakpoint-xl) {
   .hero {
     height: 100vh;
@@ -224,4 +267,13 @@
     grid-template-columns: 1fr 2fr;
     gap: 6rem;
   }
+
+.example_container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+  
 }
