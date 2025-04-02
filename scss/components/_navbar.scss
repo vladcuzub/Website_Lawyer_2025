@@ -80,36 +80,43 @@
 
   // Hamburger button
   .menu_button {
-    position: absolute;
-    top: 0.8rem;
-    right: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  
 
-    span {
-      width: 30px;
-      height: 2px;
-      background-color: white;
-      display: block;
-      margin: 8px;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-
-    &.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 10px);
-    }
-
-    &.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    &.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -10px);
-    }
+  span {
+    width: 28px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px;
+    transition: transform 0.5s ease, opacity 0.2s linear;
   }
+  
+  &.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 12px);
+  
+  }
+  
+  &.active span:nth-child(2) {
+     transform:  translate(10px, 0);
+     opacity: 0;
+ 
+       
+  }
+  
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -12px);
+  }
+}
 }
 
 @media screen and (min-width: $breakpoint-xl) {
@@ -122,11 +129,15 @@
       align-items: center;
     }
   }
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    .menu_button {
+  display: none;
+  }
     .nav_list {
     display: flex !important; // Asigură afișarea pe orizontală
     flex-direction: row !important;
@@ -146,8 +157,5 @@
       }
     }
 
-    .menu_button {
-      display: none;
-    }
-  }
 
+}

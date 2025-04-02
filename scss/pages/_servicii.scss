@@ -112,6 +112,9 @@
     overflow: hidden;
     margin-bottom: 1rem;
        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.087);
+       img {
+        filter: drop-shadow(-2px 8px 5px rgb(112, 110, 107));
+       }
     .card-title {
       font-family: $font-secondary;
       color: $secondary-brown;
@@ -127,9 +130,6 @@
       cursor: pointer;
     }
   }
-
-  //expand Box
-
 
   .hidden_text {
     max-height: 0;
